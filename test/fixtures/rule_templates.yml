@@ -1,9 +1,8 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  description: MyString
-
-two:
-  name: MyString
-  description: MyString
+  name: Age
+  description: Things older than this date
+  fields: 
+    - created_at
+  match_type: date

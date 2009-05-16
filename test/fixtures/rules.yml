@@ -1,6 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-# one:
+one:
+  rule_template: one
+  field: created_at
+  operator: <
+  value: "4 days ago"
+  
 #   column: value
 #
 # two:

@@ -6,7 +6,11 @@ class Rule < ActiveRecord::Base
   validates_presence_of :value
 
   validates_each(:field) do |record,attrib,value|
-    record.errors.add attrib, "Not in the list" unless record.rule_template.fields.include?(value)
+    if record.rule_template.nil?
+      record.errors.add :rule_template 
+    else
+      record.errors.add attrib, "Not in the list" unless record.rule_template.fields.include?(value)
+    end
   end
   
   def self.operators

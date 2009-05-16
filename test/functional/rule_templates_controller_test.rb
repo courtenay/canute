@@ -14,7 +14,7 @@ class RuleTemplatesControllerTest < ActionController::TestCase
 
   test "should create rule_template" do
     assert_difference('RuleTemplate.count') do
-      post :create, :rule_template => { }
+      post :create, :rule_template => { :name => "hi", :fields => "created_at", :match_type => "string"}
     end
 
     assert_redirected_to rule_template_path(assigns(:rule_template))

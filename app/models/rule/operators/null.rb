@@ -2,7 +2,7 @@ class Rule
   module Operators
     class Null < Base
       def to_sql
-        ["#{field} IS NULL"]
+        ["#{field}_id IS NULL"]
       end
     end
   end
