@@ -14,7 +14,7 @@ class RuleSetsControllerTest < ActionController::TestCase
 
   test "should create rule_set" do
     assert_difference('RuleSet.count') do
-      post :create, :rule_set => { }
+      post :create, :rule_set => {  }
     end
 
     assert_redirected_to rule_set_path(assigns(:rule_set))

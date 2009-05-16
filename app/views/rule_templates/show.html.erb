@@ -25,16 +25,15 @@
 
 <h3>Rules using this template</h3>
 
-<% begin %>
 <table>
 <% @rule_template.rules.each do |rule| %>
   <tr>
+    <td><%= link_to h(rule.name), rule %></td>
     <td><%=h rule.field %></td>
     <td><%=h rule.operator %></td>
     <td><%=h rule.value %></td>
-    <td><%=h rule.display_conditions %></td>
+    <td><%=h rule.display_conditions rescue "error" %></td>
+    <td><%= link_to "edit", edit_rule_path(rule) %></td>
   </tr>
 <% end %>
 </table>
-<% rescue %>
-<% end %>

@@ -17,7 +17,11 @@ class Rule < ActiveRecord::Base
   end
   
   def name
-    "#{field} #{operator} #{value}"
+    if operator == 'null'
+      operator = "to empty record"
+      # value = nil
+    end
+    "#{field} #{operator} '#{value}'"
   end
   
   def self.operators

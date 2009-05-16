@@ -7,7 +7,7 @@
 <table>
 <% @rule_set.rules.each do |rule| %>
   <tr>
-    <td><%=h rule.name %></td>
+    <td><%= link_to h(rule.name), rule %></td>
   </tr>
 <% end %>
 </table>
