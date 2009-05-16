@@ -1,35 +1,5 @@
 <h1>New rule</h1>
 
-<% form_for(@rule) do |f| %>
-  <% if f.object.rule_template.nil? %>
-    <% RuleTemplate.all.each do |rt| %>
-      <%= f.radio_button :rule_template_id, rt.id %> <%=h rt.name %><br />
-    <% end %>
-    <%= f.submit 'Use rule'%>
-  <% else %>
-  <%= f.hidden_field :rule_template_id %>
-  <%= f.error_messages %>
-
-  <h2><%= f.object.rule_template.name %></h2>
-  <table>
-  <tr>
-    <td><%= f.label :field %></td>
-    <td><%= f.label :operator %></td>
-    <td><%= f.label :value %></td>
-  </tr>
-  <tr>
-    <td><%= f.select :field, f.object.rule_template.fields %></td>
-    <td><%= f.select :operator, Rule.operators[f.object.rule_template.match_type] %></td>
-    <td><%= f.text_field :value %></td>
-  </tr>
-  </table>
-  <p>Help on values:<br />
-    For dates: try "1 week ago", "2 days ago", "2008-12-24"
-  </p>  
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-  <% end %>
-<% end %>
+<%= render :partial => "new" %>
 
 <%= link_to 'Back', rules_path %>

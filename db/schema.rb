@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090516022526) do
+ActiveRecord::Schema.define(:version => 20090516031043) do
 
   create_table "rule_items", :force => true do |t|
     t.integer  "rule_id"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(:version => 20090516022526) do
     t.string   "value"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "position"
+    t.integer  "rule_set_id"
   end
 
 end

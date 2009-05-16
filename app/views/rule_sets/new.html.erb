@@ -8,13 +8,8 @@
     <%= f.text_field :name %>
   </p>
 
-  Add a rule:
   <p>
-    <%= f.select :rule_ids, Rule.all.map { |r| [r.name, r.id] } %>
-  </p>
-  
-  <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Create' %> Next: add a rule
   </p>
 <% end %>
 

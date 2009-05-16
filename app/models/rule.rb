@@ -1,5 +1,7 @@
 class Rule < ActiveRecord::Base
   belongs_to :rule_template
+  belongs_to :rule_set
+  acts_as_list :scope => :rule_set_id
   
   validates_presence_of :rule_template_id
   validates_presence_of :field

@@ -1,11 +1,21 @@
-<p>
+<h2>
   <b>Name:</b>
   <%=h @rule_set.name %>
-</p>
+</h2>
 
+<h3>Rules</h3>
+<table>
 <% @rule_set.rules.each do |rule| %>
-  <%=h rule.name %><br />
+  <tr>
+    <td><%=h rule.name %></td>
+  </tr>
 <% end %>
+</table>
+
+<div style="background-color: #eef;width:200px;margin: 20px 0; padding: 5px">
+  <% @rule = @rule_set.rules.build %>
+  <%= render :partial => "rules/new" %>
+</div>
 
 <%= link_to 'Edit', edit_rule_set_path(@rule_set) %> |
 <%= link_to 'Back', rule_sets_path %>

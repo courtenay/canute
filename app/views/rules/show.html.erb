@@ -1,3 +1,11 @@
+<% if @rule.rule_set %>
+<h2>Rule for <%= link_to h(@rule.rule_set.name), @rule.rule_set %></h2>
+<% end %>
+
+<p>
+  <b>Position</b>
+  <%=h @rule.position %>
+</p>
 <p>
   <b>Rule template:</b>
   <%=h @rule.rule_template_id %>

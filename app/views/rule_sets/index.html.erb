@@ -3,13 +3,13 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Has many</th>
+    <th>Rules</th>
   </tr>
 
 <% @rule_sets.each do |rule_set| %>
   <tr>
     <td><%=h rule_set.name %></td>
-    <td><%=h rule_set.has_many %></td>
+    <td><%=h rule_set.rules.size %></td>
     <td><%= link_to 'Show', rule_set %></td>
     <td><%= link_to 'Edit', edit_rule_set_path(rule_set) %></td>
     <td><%= link_to 'Destroy', rule_set, :confirm => 'Are you sure?', :method => :delete %></td>
