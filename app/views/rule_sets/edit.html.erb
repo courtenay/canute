@@ -1,0 +1,26 @@
+<h1>Editing rule_set</h1>
+
+<% form_for(@rule_set) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <% @rule_set.rules.each do |rule| %>
+    <%#= check_box_tag 'rule_set', 'rule_ids[]', { :value => rule.id, :checked => true } %> <%=h rule.name %><br />
+  <% end %>
+
+
+  Add a rule:
+  <p>
+    <%#= select_tag 'rule_set[rule_ids[]]', options_for_select(Rule.all.map { |r| [r.name, r.id] }) %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @rule_set %> |
+<%= link_to 'Back', rule_sets_path %>

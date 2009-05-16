@@ -1,0 +1,22 @@
+<h1>Listing rule_sets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Has many</th>
+  </tr>
+
+<% @rule_sets.each do |rule_set| %>
+  <tr>
+    <td><%=h rule_set.name %></td>
+    <td><%=h rule_set.has_many %></td>
+    <td><%= link_to 'Show', rule_set %></td>
+    <td><%= link_to 'Edit', edit_rule_set_path(rule_set) %></td>
+    <td><%= link_to 'Destroy', rule_set, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New rule_set', new_rule_set_path %>

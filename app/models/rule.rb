@@ -1,5 +1,6 @@
 class Rule < ActiveRecord::Base
   belongs_to :rule_template
+  
   validates_presence_of :rule_template_id
   validates_presence_of :field
   validates_presence_of :operator
@@ -11,6 +12,10 @@ class Rule < ActiveRecord::Base
     else
       record.errors.add attrib, "Not in the list" unless record.rule_template.fields.include?(value)
     end
+  end
+  
+  def name
+    "#{field} #{operator} #{value}"
   end
   
   def self.operators

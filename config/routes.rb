@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :rule_sets
+
+  map.resources :rule_sets
+
 
 
   map.resources :rules

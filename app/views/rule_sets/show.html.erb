@@ -1,0 +1,11 @@
+<p>
+  <b>Name:</b>
+  <%=h @rule_set.name %>
+</p>
+
+<% @rule_set.rules.each do |rule| %>
+  <%=h rule.name %><br />
+<% end %>
+
+<%= link_to 'Edit', edit_rule_set_path(@rule_set) %> |
+<%= link_to 'Back', rule_sets_path %>
