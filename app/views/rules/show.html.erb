@@ -1,0 +1,27 @@
+<p>
+  <b>Rule template:</b>
+  <%=h @rule.rule_template_id %>
+</p>
+
+<p>
+  <b>Field:</b>
+  <%=h @rule.field %>
+</p>
+
+<p>
+  <b>Operator:</b>
+  <%=h @rule.operator %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%=h @rule.value %>
+</p>
+
+<p>
+  <b>SQL:</b>
+  <%=h @rule.display_conditions %>
+</p>
+
+<%= link_to 'Edit', edit_rule_path(@rule) %> |
+<%= link_to 'Back', rules_path %>

@@ -1,0 +1,29 @@
+<h1>Listing rules</h1>
+
+<table>
+  <tr>
+    <th>Rule template</th>
+    <th>Field</th>
+    <th>Operator</th>
+    <th>Value</th>
+    <th>SQL</th>
+    <th colspan="3">Actions</th>
+  </tr>
+
+<% @rules.each do |rule| %>
+  <tr class="<%= cycle('', 'alt') %>">
+    <td><%=h rule.rule_template_id %></td>
+    <td><%=h rule.field %></td>
+    <td><%=h rule.operator %></td>
+    <td><%=h rule.value %></td>
+    <td><%=h rule.display_conditions %></td>
+    <td><%= link_to 'Show', rule %></td>
+    <td><%= link_to 'Edit', edit_rule_path(rule) %></td>
+    <td><%= link_to 'Destroy', rule, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New rule', new_rule_path %>

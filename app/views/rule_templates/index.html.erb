@@ -1,0 +1,29 @@
+<h1>Listing rule_templates</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Available Fields</th>
+    <th>Rules</th>
+    <th>Match type</th>
+    <th colspan="3">Actions</th>
+  </tr>
+
+<% @rule_templates.each do |rule_template| %>
+  <tr>
+    <td><%=h rule_template.name %></td>
+    <td><%=h rule_template.description %></td>
+    <td><%=h rule_template.fields.inspect %></td>
+    <td><%=h rule_template.rules.size %></td>
+    <td><%=h rule_template.match_type %></td>
+    <td><%= link_to 'Show', rule_template %></td>
+    <td><%= link_to 'Edit', edit_rule_template_path(rule_template) %></td>
+    <td><%= link_to 'Destroy', rule_template, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New rule_template', new_rule_template_path %>

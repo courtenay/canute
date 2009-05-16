@@ -1,0 +1,27 @@
+<h1>New rule_template</h1>
+
+<% form_for(@rule_template) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :match_type %><br />
+    <%= f.select :match_type, [['string'],['date'],['association']] %>
+  </p>
+  <p>
+    <%= f.label :fields %><br />
+    <%= f.text_field :fields %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', rule_templates_path %>

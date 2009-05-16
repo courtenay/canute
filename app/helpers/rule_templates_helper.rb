@@ -1,0 +1,2 @@
+module RuleTemplatesHelper
+end

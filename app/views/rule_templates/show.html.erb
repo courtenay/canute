@@ -1,0 +1,40 @@
+<p>
+  <b>Name:</b>
+  <%=h @rule_template.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @rule_template.description %>
+</p>
+
+<p>
+  <b>Fields:</b>
+  <%=h @rule_template.fields.inspect %>
+</p>
+
+<p>
+  <b>Match type:</b>
+  <%=h @rule_template.match_type %>
+</p>
+
+<%= link_to 'Edit', edit_rule_template_path(@rule_template) %> |
+<%= link_to 'Back', rule_templates_path %>
+
+<hr />
+
+<h3>Rules using this template</h3>
+
+<% begin %>
+<table>
+<% @rule_template.rules.each do |rule| %>
+  <tr>
+    <td><%=h rule.field %></td>
+    <td><%=h rule.operator %></td>
+    <td><%=h rule.value %></td>
+    <td><%=h rule.display_conditions %></td>
+  </tr>
+<% end %>
+</table>
+<% rescue %>
+<% end %>

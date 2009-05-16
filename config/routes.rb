@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+
+
+  map.resources :rules
+  map.resources :rule_templates
+  map.root :controller => "rules"
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
