@@ -1,0 +1,158 @@
+/*------------------------------------------------------------------------------------
+  @group Global Reset
+------------------------------------------------------------------------------------*/
+* {
+  padding:0;
+  margin:0;
+}
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, dl, fieldset, address { margin:1em 0; }
+li, dd { margin-left:5%; }
+fieldset { padding: .5em; }
+select option{ padding:0 5px; }
+
+.access{ display:none; } /* For accessibility related elements */
+.clear{ clear:both; height:0px; font-size:0px; line-height:0px; overflow:hidden; }
+a{ outline:none; }
+a img{ border:none; }
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display:inline-block;}
+.clearfix {display: block;}
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group Main Layout
+------------------------------------------------------------------------------------*/
+
+body{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:12px;
+  line-height:1.5;
+  background:#fff;
+}
+
+#header, #content, #footer, #superheader .inner{
+  width:800px;
+  margin:0 auto;
+}
+
+
+/*------------------------------------------------------------------------------------
+  @group Superheader
+------------------------------------------------------------------------------------*/
+
+#superheader{
+  padding:6px 0 8px 0;
+  font-size:11px;
+  color:#ddd;
+  background:#400;
+  border-bottom: 8px solid #820;
+}
+#superheader:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html #superheader {height: 1%;}
+#superheader {display:inline-block;}
+#superheader {display: block;}
+
+#superheader a{
+  color:#aaa;
+  text-decoration:none;
+}
+
+#superheader p{
+  float:right;
+  margin:1px 0 0 0;
+}
+#superheader ul.gnav{
+  display:inline;
+  float:left;
+  margin:2px 0 0 -7px;
+  line-height:1.2;
+}
+#superheader ul.gnav.first{
+  float:right;
+  margin-left:15px;
+  margin-right:-10px;
+}
+#superheader ul.gnav li{
+  list-style-type:none;
+  display:inline;
+  margin:0;
+  padding:0 7px 0 8px;
+  border-left:1px solid #fff;
+}
+#superheader ul.gnav li:first-child{
+  border-left:none;
+}
+
+/* @end */
+
+/*------------------------------------------------------------------------------------
+  @group Footer
+------------------------------------------------------------------------------------*/
+
+#footer{
+  margin:18px auto 0 auto;
+  padding:5px;
+  height:20px;
+  font-size:11px;
+  color:#777;
+  border-top:8px solid #ccc;
+  background-color: #efefef;
+}
+
+#footer a{
+  text-decoration:none;
+  display:inline;
+  margin:0;
+  background-color: #888;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  padding: 2px 7px;
+  color: white;
+  border-left:1px solid #f1f1f1;
+  text-transform:lowercase;
+}
+#footer a:hover {
+  background-color: #222;
+}
+#footer a:first-child{
+  border:none;
+}
+
+/* @end */
+
+
+/*------------------------------------------------------------------------------------
+  @group Table
+------------------------------------------------------------------------------------*/
+table {
+  border-collapse: collapse;
+}
+th {
+  background-color: #aaa;
+  padding: 5px;
+}
+td {
+  border: 1px solid #aaa;
+  padding: 5px;
+}
+
+code {
+  background-color: #ff9;
+  padding: 5px;
+}
+/* @end */

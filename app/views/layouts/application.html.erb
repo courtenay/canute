@@ -5,13 +5,29 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>RuleSets: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'master' %>
 </head>
 <body>
 
-<p style="color: green"><%= flash[:notice] %></p>
+  <div id="wrapper">
+
+    <div id="superheader">
+      <div class="inner">
+        <ul class="gnav">
+          <li><b>Canute</b></li>
+          <li><%= link_to "Rules", rules_path %></li>
+          <li><%= link_to "Sets",  rule_sets_path %></li>
+          <li><%= link_to "Templates", rule_templates_path %></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="content">
+      <p style="color: green"><%= flash[:notice] %></p>
 
 <%= yield %>
 
+    </div>
+  </div>
 </body>
 </html>

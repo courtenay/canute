@@ -1,4 +1,4 @@
-<h1>Editing rule_set</h1>
+<h1>Editing Rule Set</h1>
 
 <% form_for(@rule_set) do |f| %>
   <%= f.error_messages %>
@@ -17,5 +17,7 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @rule_set %> |
-<%= link_to 'Back', rule_sets_path %>
+<div id="footer">
+  <%= link_to 'Show', @rule_set %>
+  <%= link_to 'Back', rule_sets_path %>
+</div>
