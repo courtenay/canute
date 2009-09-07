@@ -3,3 +3,11 @@ for trying to rule even the waves of the sea.
 
 This app has very little to do with the sea, or history for that matter, but it *is* all about rules.
 
+It will take a series of user-defined rules and generate a SQL string to search your database.
+
+TODO:
+
+- Use Sphinx or another search engine. This will speed up LIKE queries, and we can generate the appropriate conditions just like we do with sql.
+- More descriptive information about how to integrate with your app
+- Pluginize
+- Nicer layout

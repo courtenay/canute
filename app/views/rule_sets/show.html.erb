@@ -12,6 +12,9 @@
 <% end %>
 </table>
 
+<h3>SQL</h3>
+<pre><code><%= @rule_set.conditions.inspect %></code></pre>
+
 <div style="background-color: #eef;width:200px;margin: 20px 0; padding: 5px">
   <% @rule = @rule_set.rules.build %>
   <%= render :partial => "rules/new" %>
