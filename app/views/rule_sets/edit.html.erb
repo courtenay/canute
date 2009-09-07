@@ -8,15 +8,10 @@
     <%= f.text_field :name %>
   </p>
 
-  <% @rule_set.rules.each do |rule| %>
-    <%#= check_box_tag 'rule_set', 'rule_ids[]', { :value => rule.id, :checked => true } %> <%=h rule.name %><br />
+  <% @rule_set.rules.each_with_index do |rule,i| %>
+    <%= check_box_tag "rule_set[rule_ids][]", rule.id, :checked => true %> <%=h rule.name %><br />
   <% end %>
 
-
-  Add a rule:
-  <p>
-    <%#= select_tag 'rule_set[rule_ids[]]', options_for_select(Rule.all.map { |r| [r.name, r.id] }) %>
-  </p>
   <p>
     <%= f.submit 'Update' %>
   </p>

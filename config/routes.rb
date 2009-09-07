@@ -3,11 +3,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :rule_sets
 
-
-
   map.resources :rules
   map.resources :rule_templates
-  map.root :controller => "rules"
+  map.root :controller => "rule_sets"
 
   # The priority is based upon order of creation: first created -> highest priority.
 

@@ -1,16 +1,16 @@
-<h1>Listing rule_sets</h1>
+<h1>Rule Sets</h1>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Rules</th>
+    <th colspan="2">Actions</th>
   </tr>
 
 <% @rule_sets.each do |rule_set| %>
   <tr>
-    <td><%=h rule_set.name %></td>
+    <td><%= link_to h(rule_set.name), rule_set %></td>
     <td><%=h rule_set.rules.size %></td>
-    <td><%= link_to 'Show', rule_set %></td>
     <td><%= link_to 'Edit', edit_rule_set_path(rule_set) %></td>
     <td><%= link_to 'Destroy', rule_set, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
