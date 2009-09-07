@@ -40,7 +40,7 @@ class RulesController < ApplicationController
   # POST /rules
   # POST /rules.xml
   def create
-    @rule_set = RuleSet.find params[:rule][:rule_set_id]
+    @rule_set = RuleSet.find params[:rule][:rule_set_id] if params[:rule][:rule_set_id]
     @rule = Rule.new(params[:rule])
 
     respond_to do |format|

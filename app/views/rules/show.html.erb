@@ -1,5 +1,7 @@
 <% if @rule.rule_set %>
 <h2>Rule for <%= link_to h(@rule.rule_set.name), @rule.rule_set %></h2>
+<% else %>
+<h2>Rule for (No rule set)</h2>
 <% end %>
 
 <p>

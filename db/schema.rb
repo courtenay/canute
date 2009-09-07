@@ -11,14 +11,6 @@
 
 ActiveRecord::Schema.define(:version => 20090516031043) do
 
-  create_table "rule_items", :force => true do |t|
-    t.integer  "rule_id"
-    t.integer  "rule_set_id"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "rule_sets", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
